@@ -1,0 +1,62 @@
+  <!-- <table class="table align-middle mb-0 bg-white">
+    <thead class="bg-light">
+      <tr>
+        <th>Project Name</th>
+        <th>Customer</th>
+        <th>Status</th>
+        <th>Task Counts</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let project of projectList">
+        <td>
+          <div class="d-flex align-items-center">
+  
+            <div class="ms-3">
+              <a class="nav-link" routerLink="/projects/{{project.id}}">
+                <p class="fw-bold mb-1">{{project.name}}</p>
+              </a>
+            </div>
+          </div>
+        </td>
+        <td>
+          <p class="fw-normal mb-1">{{project.customerName}} {{project.customerSurname}}</p>
+          <p class="text-muted mb-0">{{project.customerUsername}}</p>
+        </td>
+        <td>
+          <img *ngIf="project.taskCount == 0" src="https://img.icons8.com/bubbles/50/000000/checked.png"/>
+          <img *ngIf="project.taskCount != 0" src="https://img.icons8.com/clouds/50/000000/unchecked-checkbox.png"/>
+        </td>
+        <td>
+            <p class="fw-normal mb-1">Task(s): {{project.taskCount}}</p>
+        </td>
+        <td>
+          <button type="button" class="btn btn-primary btn-sm btn-rounded">
+            Edit
+          </button>
+          <button type="button" class="btn btn-danger btn-sm btn-rounded">
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+   -->
+
+   <div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Accordion Item #1
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p>ali {{projectDetail.customerId}}</p>
