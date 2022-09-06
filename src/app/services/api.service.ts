@@ -5,6 +5,7 @@ import { environment } from 'src/environments/environment';
 import { ProjectDTO } from '../models/project-model';
 import { ProjectDetailDTO } from '../models/projectDetail-model';
 import { TaskDTO } from '../models/task-model';
+import { UserDTO } from '../models/user-model';
 
 @Injectable({
   providedIn: 'root'
@@ -22,12 +23,22 @@ export class ApiService {
     return this.http.get<ProjectDetailDTO>(`${environment.BASE_URL}/projects/${id}`);
   }
 
-  getTasks(): Observable<TaskDTO[]> {
-    return this.http.get<TaskDTO[]>(`${environment.BASE_URL}/tasks`, {
+  getTasks(projectId: number): Observable<TaskDTO[]> {
+    console.log(projectId)
+    return this.http.get<TaskDTO[]>(`${environment.BASE_URL}/${projectId}/tasks`, {
     });
   }
 
   getTaskDetail(id: number): Observable<TaskDTO> {
     return this.http.get<TaskDTO>(`${environment.BASE_URL}/tasks/${id}`);
+  }
+
+  getUsers(): Observable<UserDTO[]> {
+    return this.http.get<UserDTO[]>(`${environment.BASE_URL}/users`, {
+    });
+  }
+
+  getUserDetail(id: number): Observable<UserDTO> {
+    return this.http.get<UserDTO>(`${environment.BASE_URL}/users/${id}`);
   }
 }

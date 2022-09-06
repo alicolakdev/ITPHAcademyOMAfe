@@ -1,3 +1,5 @@
+import { CommentDTO } from "./comment-model";
+
 export interface TaskDTO {
     id: number;
     description: string;
@@ -8,5 +10,5 @@ export interface TaskDTO {
     project:string;
     user:string;
     userId:number;
-    comments: Array<string>;
+    comments: Array<CommentDTO>;
 }

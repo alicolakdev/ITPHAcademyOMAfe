@@ -6,6 +6,7 @@ import { PersonnelComponent } from './components/personnel/personnel.component';
 import { ProjectComponent } from './components/project/project.component';
 import { ProjectdetailComponent } from './components/projectdetail/projectdetail.component';
 import { RoleComponent } from './components/role/role.component';
+import { TaskComponent } from './components/task/task.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'projects/:id',
     component: ProjectdetailComponent
+  },
+  {
+    path: 'tasks/:id',
+    component: TaskComponent
   },
 ];
 

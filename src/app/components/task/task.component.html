@@ -1,0 +1,32 @@
+<p>{{taskDetail.description}}</p>
+
+
+<div class="input-group">
+    <textarea class="form-control" aria-label="With textarea"></textarea>
+    <input class="btn btn-primary" type="submit" value="Add Comment">
+</div>
+
+
+<table class="table align-middle mb-0 bg-white" *ngIf="taskDetail">
+    <thead class="bg-light">
+        <tr>
+            <th>Comments</th>
+            <th>User</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let comment of taskDetail.comments">
+            <td>
+                <div class="d-flex align-items-center">
+                    <div class="ms-3">
+                        <p class="fw-bold mb-1">{{comment.comment1}}</p>
+                    </div>
+                </div>
+            </td>
+
+            <td>
+                <div class="fw-bold mb-1">{{comment.name}} {{comment.surname}}</div>
+            </td>
+        </tr>
+    </tbody>
+</table>

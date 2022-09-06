@@ -11,6 +11,7 @@ import { ProjectComponent } from './components/project/project.component';
 import { ProjectdetailComponent } from './components/projectdetail/projectdetail.component';
 import { PersonnelComponent } from './components/personnel/personnel.component';
 import { CommentsComponent } from './components/comments/comments.component';
+import { TaskComponent } from './components/task/task.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { CommentsComponent } from './components/comments/comments.component';
     ProjectComponent,
     ProjectdetailComponent,
     PersonnelComponent,
-    CommentsComponent
+    CommentsComponent,
+    TaskComponent
   ],
   imports: [
     BrowserModule,

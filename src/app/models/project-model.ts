@@ -6,4 +6,5 @@ export interface ProjectDTO {
     customerName: string;
     customerSurname: string;
     taskCount: number;
+    tasks:Task[]
 }

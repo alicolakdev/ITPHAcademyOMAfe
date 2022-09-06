@@ -1,3 +1,4 @@
+import { CommentDTO } from "./comment-model";
 import { TaskDTO } from "./task-model";
 
 export interface ProjectDetailDTO {
@@ -6,4 +7,5 @@ export interface ProjectDetailDTO {
     customerId: number;
     customer: object;
     tasks: Array<TaskDTO>;
+    comments: Array<CommentDTO>
 }
