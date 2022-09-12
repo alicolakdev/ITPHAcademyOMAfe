@@ -12,6 +12,8 @@ import { ProjectdetailComponent } from './components/projectdetail/projectdetail
 import { PersonnelComponent } from './components/personnel/personnel.component';
 import { CommentsComponent } from './components/comments/comments.component';
 import { TaskComponent } from './components/task/task.component';
+import { authInterceptorProviders } from './services/auth.interceptor';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,9 +30,10 @@ import { TaskComponent } from './components/task/task.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

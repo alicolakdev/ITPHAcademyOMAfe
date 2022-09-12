@@ -41,4 +41,17 @@ export class ApiService {
   getUserDetail(id: number): Observable<UserDTO> {
     return this.http.get<UserDTO>(`${environment.BASE_URL}/users/${id}`);
   }
+
+  getPublicContent(): Observable<any> {
+    return this.http.get(environment.BASE_URL + 'all', { responseType: 'text' });
+  }
+  getUserBoard(): Observable<any> {
+    return this.http.get(environment.BASE_URL + 'user', { responseType: 'text' });
+  }
+  getModeratorBoard(): Observable<any> {
+    return this.http.get(environment.BASE_URL + 'mod', { responseType: 'text' });
+  }
+  getAdminBoard(): Observable<any> {
+    return this.http.get(environment.BASE_URL + 'admin', { responseType: 'text' });
+  }
 }
